@@ -10,6 +10,9 @@ Workflow —
 A business uploads a surplus food listing with photos and details. The AI then categorizes the food, extracts key facts, and assigns it a risk level. Low-risk listings are approved automatically and go live for nearby users to browse and reserve. High-risk listings — items like cooked proteins or dairy where spoilage is harder to verify — are held and routed to a human moderator before publication. Users claim available food through a pickup reservation, and the business is notified.
 
 <img width="499" height="259" alt="Screenshot 2026-05-08 at 4 24 05 PM" src="https://github.com/user-attachments/assets/fc5c5d7b-1339-4b72-a65c-37ed0920b75c" />
+System Context Diagram: AI-Powered Food Listing Workflow
+
+This diagram shows how the marketplace uses AI to process food listings. Businesses submit listings, which are analyzed by the AI to categorize the food and assign a risk level. Low-risk listings are automatically approved and published, while high-risk ones are sent to a human reviewer for approval. Once approved, listings become visible to users, who can then reserve pickups.
 
 <img width="1067" height="489" alt="Screenshot 2026-05-09 at 7 16 50 PM" src="https://github.com/user-attachments/assets/70413e1a-f8bd-438e-992d-7b937db615bd" />
 <img width="900" height="538" alt="Screenshot 2026-05-09 at 7 17 09 PM" src="https://github.com/user-attachments/assets/aa354e79-385f-4783-a80d-e00faecb69a5" />
