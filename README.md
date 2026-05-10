@@ -1,4 +1,3 @@
-FreshLinkAI: A marketplace for food waste
 
 Problem -
 Businesses and restaurants discard edible surplus food every day, while many people in local communities cannot access affordable meals. Online food-sharing platforms exist, but they lack trust and transparency. Users have no way to verify a listing's food condition, expiration date, or whether the source is legitimate. The result is that safe, edible food gets wasted even when there are people nearby who need it.
