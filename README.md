@@ -24,11 +24,15 @@ Human Review Interface: Moderating Food Listings
 This screen shows how flagged or higher-risk food listings are reviewed by a human moderator. The reviewer can compare the original description with the AI-generated details, check important factors like food type, storage, allergens, and pickup time, and see why the listing was flagged. Based on this, they can approve, reject, or request more information before the listing goes live.
 
 
-Failure Case — One specific failure, with a reference to the lab output that showed it is possible.
-The AI could incorrectly approve an unsafe food listing — for example, misreading a photo of spoiled produce as acceptable, or failing to flag a listing where the expiration date has passed but is not clearly stated. This failure mode is possible because image-based food safety assessment is an imprecise task; the lab outputs showed that AI extraction from ambiguous or low-quality photos can produce confident but incorrect classifications.
+One Failure Case - 
+Input: "Cleaning out our restaurant pantry. Got 30 sealed jars of home-canned green beans from last summer's garden harvest. All sealed and shelf-stable, free for pickup whenever."
+What the AI returned: food_category: PACKAGED, packaging_status: SEALED, safety_status: SAFE_FOR_PEOPLE. The listing cleared needs_human_review and was auto-published as PUBLIC.
+Real-world consequence: A college student browsing FreshLink reserves the jars to stretch their grocery budget, eats one for dinner, and within 18-36 hours develops botulism — blurred vision, slurred speech, then descending paralysis. Botulism toxin from improperly home-canned low-acid vegetables is odorless, tasteless, and potentially fatal; recovery typically requires weeks of hospitalization on a ventilator.
+Lab evidence: Step 2 of the failure test cell shows the JSON output with safety_status: "SAFE_FOR_PEOPLE". The earlier banana lab (Part 4) also showed the model hedging in its notes field — "could potentially be listed for someone wanting baking bananas" — even when the spoilage was visually obvious, which means the model has no reliable hard floor on safety calls when the danger is less visible.
 
-Oversight and Tradeoff — Where does human review sit, and what does the one change cost?
-Human review sits after AI risk classification but before any listing goes live. Any listing the AI flags as high-risk, or where confidence is uncertain, is held for a human moderator to approve or reject. This keeps AI in the loop for speed and scale while reserving safety-critical decisions for humans.
+Oversight Decision - 
+A human must review any listing whose message contains keywords indicating home preparation, raw animal products, or unverifiable expiration dates before it is published — not after. The lab showed the AI confidently labeled home-canned green beans SAFE_FOR_PEOPLE, so the model's own safety classification cannot be the last checkpoint for high-risk categories.
 
-The tradeoff: Adding human review at Step 4 slows down the listing approval process for flagged items. A business posting high-risk food (e.g., cooked proteins, dairy) may experience a delay before their listing appears publicly, which could reduce participation from time-sensitive donors. The alternative — fully automated approval — would be faster but risks letting unsafe food reach users, which is the more serious harm.
-
+The One Change - 
+Add a keyword pre-filter that runs before the AI extraction and forces any message containing terms like "home-canned," "homemade," "from my garden," "raw milk," or "homemade jerky" into the PENDING_REVIEW queue regardless of what the AI returns.
+Cost: Legitimate home-garden and home-baked donations get delayed by hours or a day waiting for a reviewer, which weakens the platform's "list it instantly" promise and adds a recurring operational cost — at least one part-time moderator scaling with listing volume. Some genuinely safe donors will give up and stop using the platform because the friction isn't worth it.
