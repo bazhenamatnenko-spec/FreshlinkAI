@@ -26,6 +26,7 @@ This screen shows how flagged or higher-risk food listings are reviewed by a hum
 
 One Failure Case - 
 Input: "Cleaning out our restaurant pantry. Got 30 sealed jars of home-canned green beans from last summer's garden harvest. All sealed and shelf-stable, free for pickup whenever."
+print()
 What the AI returned: food_category: PACKAGED, packaging_status: SEALED, safety_status: SAFE_FOR_PEOPLE. The listing cleared needs_human_review and was auto-published as PUBLIC.
 Real-world consequence: A college student browsing FreshLink reserves the jars to stretch their grocery budget, eats one for dinner, and within 18-36 hours develops botulism — blurred vision, slurred speech, then descending paralysis. Botulism toxin from improperly home-canned low-acid vegetables is odorless, tasteless, and potentially fatal; recovery typically requires weeks of hospitalization on a ventilator.
 Lab evidence: Step 2 of the failure test cell shows the JSON output with safety_status: "SAFE_FOR_PEOPLE". The earlier banana lab (Part 4) also showed the model hedging in its notes field — "could potentially be listed for someone wanting baking bananas" — even when the spoilage was visually obvious, which means the model has no reliable hard floor on safety calls when the danger is less visible.
