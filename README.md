@@ -15,6 +15,9 @@ System Context Diagram: AI-Powered Food Listing Workflow
 This diagram shows how the marketplace uses AI to process food listings. Businesses submit listings, which are analyzed by the AI to categorize the food and assign a risk level. Low-risk listings are automatically approved and published, while high-risk ones are sent to a human reviewer for approval. Once approved, listings become visible to users, who can then reserve pickups.
 
 <img width="1067" height="489" alt="Screenshot 2026-05-09 at 7 16 50 PM" src="https://github.com/user-attachments/assets/70413e1a-f8bd-438e-992d-7b937db615bd" />
+User Interface: Browsing and Reserving Food
+
+This screen shows how the user can browse available food listings in the marketplace. Each listing displays key details like food type, location, pickup time, storage requirements, and risk level. Users can filter and search listings, view more details, or reserve a pickup directly from the listing.
 <img width="900" height="538" alt="Screenshot 2026-05-09 at 7 17 09 PM" src="https://github.com/user-attachments/assets/aa354e79-385f-4783-a80d-e00faecb69a5" />
 <img width="695" height="310" alt="Screenshot 2026-05-09 at 7 18 12 PM" src="https://github.com/user-attachments/assets/99acf9a2-e734-461b-80be-51178e6b89ac" />
 
