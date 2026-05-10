@@ -20,7 +20,6 @@ User Interface: Browsing and Reserving Food
 This screen shows how the user can browse available food listings in the marketplace. Each listing displays key details like food type, location, pickup time, storage requirements, and risk level. Users can filter and search listings, view more details, or reserve a pickup directly from the listing.
 <img width="900" height="538" alt="Screenshot 2026-05-09 at 7 17 09 PM" src="https://github.com/user-attachments/assets/aa354e79-385f-4783-a80d-e00faecb69a5" />
 Human Review Interface: Moderating Food Listings
-
 This screen shows how flagged or higher-risk food listings are reviewed by a human moderator. The reviewer can compare the original description with the AI-generated details, check important factors like food type, storage, allergens, and pickup time, and see why the listing was flagged. Based on this, they can approve, reject, or request more information before the listing goes live.
 <img width="695" height="310" alt="Screenshot 2026-05-09 at 7 18 12 PM" src="https://github.com/user-attachments/assets/99acf9a2-e734-461b-80be-51178e6b89ac" />
 
