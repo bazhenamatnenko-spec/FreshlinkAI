@@ -22,13 +22,10 @@ This screen shows how the user can browse available food listings in the marketp
 Human Review Interface: Moderating Food Listings
 
 This screen shows how flagged or higher-risk food listings are reviewed by a human moderator. The reviewer can compare the original description with the AI-generated details, check important factors like food type, storage, allergens, and pickup time, and see why the listing was flagged. Based on this, they can approve, reject, or request more information before the listing goes live.
-<img width="695" height="310" alt="Screenshot 2026-05-09 at 7 18 12 PM" src="https://github.com/user-attachments/assets/99acf9a2-e734-461b-80be-51178e6b89ac" />
-
 
 
 Failure Case — One specific failure, with a reference to the lab output that showed it is possible.
 The AI could incorrectly approve an unsafe food listing — for example, misreading a photo of spoiled produce as acceptable, or failing to flag a listing where the expiration date has passed but is not clearly stated. This failure mode is possible because image-based food safety assessment is an imprecise task; the lab outputs showed that AI extraction from ambiguous or low-quality photos can produce confident but incorrect classifications.
-** figure this out
 
 Oversight and Tradeoff — Where does human review sit, and what does the one change cost?
 Human review sits at Step 4 — after AI risk classification but before any listing goes live. Any listing the AI flags as high-risk, or where confidence is uncertain, is held for a human moderator to approve or reject. This keeps AI in the loop for speed and scale while reserving safety-critical decisions for humans.
