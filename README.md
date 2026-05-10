@@ -11,7 +11,11 @@ A business uploads a surplus food listing with photos and details. The AI then c
 
 <img width="499" height="259" alt="Screenshot 2026-05-08 at 4 24 05 PM" src="https://github.com/user-attachments/assets/fc5c5d7b-1339-4b72-a65c-37ed0920b75c" />
 
-Provide screenshots to make it more visual.
+<img width="1067" height="489" alt="Screenshot 2026-05-09 at 7 16 50 PM" src="https://github.com/user-attachments/assets/70413e1a-f8bd-438e-992d-7b937db615bd" />
+<img width="900" height="538" alt="Screenshot 2026-05-09 at 7 17 09 PM" src="https://github.com/user-attachments/assets/aa354e79-385f-4783-a80d-e00faecb69a5" />
+<img width="695" height="310" alt="Screenshot 2026-05-09 at 7 18 12 PM" src="https://github.com/user-attachments/assets/99acf9a2-e734-461b-80be-51178e6b89ac" />
+
+
 
 Failure Case — One specific failure, with a reference to the lab output that showed it is possible.
 The AI could incorrectly approve an unsafe food listing — for example, misreading a photo of spoiled produce as acceptable, or failing to flag a listing where the expiration date has passed but is not clearly stated. This failure mode is possible because image-based food safety assessment is an imprecise task; the lab outputs showed that AI extraction from ambiguous or low-quality photos can produce confident but incorrect classifications.
