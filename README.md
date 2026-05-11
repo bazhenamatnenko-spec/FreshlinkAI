@@ -30,6 +30,7 @@ A seller submitted a listing with a photo of bananas that had turned completely 
 
 Oversight Decision - 
 A human must review any listing whose message contains keywords indicating home preparation, raw animal products, or unverifiable expiration dates before it is published — not after.  Their job is to catch internal contradictions and assess the actual product, not validate any single block of the model's output. In the banana case, the reviewer sees the conflict between FOOD_TYPE and CONDITION, looks at the photo, and resolves it: the bananas are visibly compost-only, the listing is rejected or reclassified, and the contradictory baking language never reaches a buyer or a downstream system.
+
 The One Change - 
 The cost of oversight is speed and scale. Listings don't publish instantly, and as volume grows so does the review burden — more listings means more reviewers, more payroll, more coordination. 
 The benefit is that contradictions in the AI's output get caught before anyone acts on them. A reviewer looks at the actual product, so they can catch contradictions the model missed. This is very important because it protects people from getting potentially spoiled or harmful food
